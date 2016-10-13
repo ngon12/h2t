@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Cơ sở dữ liệu: `h2t`
@@ -29,9 +29,9 @@ SET time_zone = "+00:00";
 CREATE TABLE `h2t_commentmeta` (
   `meta_id` bigint(20) UNSIGNED NOT NULL,
   `comment_id` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
-  `meta_key` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_520_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `meta_key` varchar(255) COLLATE utf8 DEFAULT NULL,
+  `meta_value` longtext COLLATE utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 -- --------------------------------------------------------
 
@@ -42,20 +42,20 @@ CREATE TABLE `h2t_commentmeta` (
 CREATE TABLE `h2t_comments` (
   `comment_ID` bigint(20) UNSIGNED NOT NULL,
   `comment_post_ID` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
-  `comment_author` tinytext COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `comment_author_email` varchar(100) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `comment_author_url` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `comment_author_IP` varchar(100) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `comment_author` tinytext COLLATE utf8 NOT NULL,
+  `comment_author_email` varchar(100) COLLATE utf8 NOT NULL DEFAULT '',
+  `comment_author_url` varchar(200) COLLATE utf8 NOT NULL DEFAULT '',
+  `comment_author_IP` varchar(100) COLLATE utf8 NOT NULL DEFAULT '',
   `comment_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `comment_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `comment_content` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `comment_content` text COLLATE utf8 NOT NULL,
   `comment_karma` int(11) NOT NULL DEFAULT '0',
-  `comment_approved` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '1',
-  `comment_agent` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `comment_type` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `comment_approved` varchar(20) COLLATE utf8 NOT NULL DEFAULT '1',
+  `comment_agent` varchar(255) COLLATE utf8 NOT NULL DEFAULT '',
+  `comment_type` varchar(20) COLLATE utf8 NOT NULL DEFAULT '',
   `comment_parent` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
   `user_id` bigint(20) UNSIGNED NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 --
 -- Đang đổ dữ liệu cho bảng `h2t_comments`
@@ -151,19 +151,19 @@ INSERT INTO `h2t_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `
 
 CREATE TABLE `h2t_links` (
   `link_id` bigint(20) UNSIGNED NOT NULL,
-  `link_url` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `link_name` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `link_image` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `link_target` varchar(25) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `link_description` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `link_visible` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'Y',
+  `link_url` varchar(255) COLLATE utf8 NOT NULL DEFAULT '',
+  `link_name` varchar(255) COLLATE utf8 NOT NULL DEFAULT '',
+  `link_image` varchar(255) COLLATE utf8 NOT NULL DEFAULT '',
+  `link_target` varchar(25) COLLATE utf8 NOT NULL DEFAULT '',
+  `link_description` varchar(255) COLLATE utf8 NOT NULL DEFAULT '',
+  `link_visible` varchar(20) COLLATE utf8 NOT NULL DEFAULT 'Y',
   `link_owner` bigint(20) UNSIGNED NOT NULL DEFAULT '1',
   `link_rating` int(11) NOT NULL DEFAULT '0',
   `link_updated` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `link_rel` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `link_notes` mediumtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `link_rss` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `link_rel` varchar(255) COLLATE utf8 NOT NULL DEFAULT '',
+  `link_notes` mediumtext COLLATE utf8 NOT NULL,
+  `link_rss` varchar(255) COLLATE utf8 NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 -- --------------------------------------------------------
 
@@ -173,10 +173,10 @@ CREATE TABLE `h2t_links` (
 
 CREATE TABLE `h2t_options` (
   `option_id` bigint(20) UNSIGNED NOT NULL,
-  `option_name` varchar(191) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `option_value` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `autoload` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'yes'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `option_name` varchar(191) COLLATE utf8 NOT NULL DEFAULT '',
+  `option_value` longtext COLLATE utf8 NOT NULL,
+  `autoload` varchar(20) COLLATE utf8 NOT NULL DEFAULT 'yes'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 --
 -- Đang đổ dữ liệu cho bảng `h2t_options`
@@ -517,9 +517,9 @@ INSERT INTO `h2t_options` (`option_id`, `option_name`, `option_value`, `autoload
 CREATE TABLE `h2t_postmeta` (
   `meta_id` bigint(20) UNSIGNED NOT NULL,
   `post_id` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
-  `meta_key` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_520_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `meta_key` varchar(255) COLLATE utf8 DEFAULT NULL,
+  `meta_value` longtext COLLATE utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 --
 -- Đang đổ dữ liệu cho bảng `h2t_postmeta`
@@ -10312,26 +10312,26 @@ CREATE TABLE `h2t_posts` (
   `post_author` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
   `post_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `post_date_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `post_content` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `post_title` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `post_excerpt` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `post_status` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'publish',
-  `comment_status` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'open',
-  `ping_status` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'open',
-  `post_password` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `post_name` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `to_ping` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `pinged` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `post_content` longtext COLLATE utf8 NOT NULL,
+  `post_title` text COLLATE utf8 NOT NULL,
+  `post_excerpt` text COLLATE utf8 NOT NULL,
+  `post_status` varchar(20) COLLATE utf8 NOT NULL DEFAULT 'publish',
+  `comment_status` varchar(20) COLLATE utf8 NOT NULL DEFAULT 'open',
+  `ping_status` varchar(20) COLLATE utf8 NOT NULL DEFAULT 'open',
+  `post_password` varchar(20) COLLATE utf8 NOT NULL DEFAULT '',
+  `post_name` varchar(200) COLLATE utf8 NOT NULL DEFAULT '',
+  `to_ping` text COLLATE utf8 NOT NULL,
+  `pinged` text COLLATE utf8 NOT NULL,
   `post_modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `post_modified_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `post_content_filtered` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `post_content_filtered` longtext COLLATE utf8 NOT NULL,
   `post_parent` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
-  `guid` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `guid` varchar(255) COLLATE utf8 NOT NULL DEFAULT '',
   `menu_order` int(11) NOT NULL DEFAULT '0',
-  `post_type` varchar(20) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT 'post',
-  `post_mime_type` varchar(100) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `post_type` varchar(20) COLLATE utf8 NOT NULL DEFAULT 'post',
+  `post_mime_type` varchar(100) COLLATE utf8 NOT NULL DEFAULT '',
   `comment_count` bigint(20) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 --
 -- Đang đổ dữ liệu cho bảng `h2t_posts`
@@ -11569,9 +11569,9 @@ CREATE TABLE `h2t_revslider_static_slides` (
 CREATE TABLE `h2t_termmeta` (
   `meta_id` bigint(20) UNSIGNED NOT NULL,
   `term_id` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
-  `meta_key` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_520_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `meta_key` varchar(255) COLLATE utf8 DEFAULT NULL,
+  `meta_value` longtext COLLATE utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 --
 -- Đang đổ dữ liệu cho bảng `h2t_termmeta`
@@ -11615,10 +11615,10 @@ INSERT INTO `h2t_termmeta` (`meta_id`, `term_id`, `meta_key`, `meta_value`) VALU
 
 CREATE TABLE `h2t_terms` (
   `term_id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `slug` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `name` varchar(200) COLLATE utf8 NOT NULL DEFAULT '',
+  `slug` varchar(200) COLLATE utf8 NOT NULL DEFAULT '',
   `term_group` bigint(10) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 --
 -- Đang đổ dữ liệu cho bảng `h2t_terms`
@@ -11724,7 +11724,7 @@ CREATE TABLE `h2t_term_relationships` (
   `object_id` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
   `term_taxonomy_id` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
   `term_order` int(11) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 --
 -- Đang đổ dữ liệu cho bảng `h2t_term_relationships`
@@ -12564,11 +12564,11 @@ INSERT INTO `h2t_term_relationships` (`object_id`, `term_taxonomy_id`, `term_ord
 CREATE TABLE `h2t_term_taxonomy` (
   `term_taxonomy_id` bigint(20) UNSIGNED NOT NULL,
   `term_id` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
-  `taxonomy` varchar(32) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `description` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `taxonomy` varchar(32) COLLATE utf8 NOT NULL DEFAULT '',
+  `description` longtext COLLATE utf8 NOT NULL,
   `parent` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
   `count` bigint(20) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 --
 -- Đang đổ dữ liệu cho bảng `h2t_term_taxonomy`
@@ -12673,9 +12673,9 @@ INSERT INTO `h2t_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `des
 CREATE TABLE `h2t_usermeta` (
   `umeta_id` bigint(20) UNSIGNED NOT NULL,
   `user_id` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
-  `meta_key` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_520_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `meta_key` varchar(255) COLLATE utf8 DEFAULT NULL,
+  `meta_value` longtext COLLATE utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 --
 -- Đang đổ dữ liệu cho bảng `h2t_usermeta`
@@ -12713,16 +12713,16 @@ INSERT INTO `h2t_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VAL
 
 CREATE TABLE `h2t_users` (
   `ID` bigint(20) UNSIGNED NOT NULL,
-  `user_login` varchar(60) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `user_pass` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `user_nicename` varchar(50) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `user_email` varchar(100) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `user_url` varchar(100) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `user_login` varchar(60) COLLATE utf8 NOT NULL DEFAULT '',
+  `user_pass` varchar(255) COLLATE utf8 NOT NULL DEFAULT '',
+  `user_nicename` varchar(50) COLLATE utf8 NOT NULL DEFAULT '',
+  `user_email` varchar(100) COLLATE utf8 NOT NULL DEFAULT '',
+  `user_url` varchar(100) COLLATE utf8 NOT NULL DEFAULT '',
   `user_registered` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `user_activation_key` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `user_activation_key` varchar(255) COLLATE utf8 NOT NULL DEFAULT '',
   `user_status` int(11) NOT NULL DEFAULT '0',
-  `display_name` varchar(250) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `display_name` varchar(250) COLLATE utf8 NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 --
 -- Đang đổ dữ liệu cho bảng `h2t_users`
@@ -12740,14 +12740,14 @@ INSERT INTO `h2t_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user
 CREATE TABLE `h2t_woocommerce_api_keys` (
   `key_id` bigint(20) NOT NULL,
   `user_id` bigint(20) NOT NULL,
-  `description` longtext COLLATE utf8mb4_unicode_520_ci,
-  `permissions` varchar(10) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `consumer_key` char(64) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `consumer_secret` char(43) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `nonces` longtext COLLATE utf8mb4_unicode_520_ci,
-  `truncated_key` char(7) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `description` longtext COLLATE utf8,
+  `permissions` varchar(10) COLLATE utf8 NOT NULL,
+  `consumer_key` char(64) COLLATE utf8 NOT NULL,
+  `consumer_secret` char(43) COLLATE utf8 NOT NULL,
+  `nonces` longtext COLLATE utf8,
+  `truncated_key` char(7) COLLATE utf8 NOT NULL,
   `last_access` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 -- --------------------------------------------------------
 
@@ -12757,12 +12757,12 @@ CREATE TABLE `h2t_woocommerce_api_keys` (
 
 CREATE TABLE `h2t_woocommerce_attribute_taxonomies` (
   `attribute_id` bigint(20) NOT NULL,
-  `attribute_name` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `attribute_label` longtext COLLATE utf8mb4_unicode_520_ci,
-  `attribute_type` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `attribute_orderby` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `attribute_name` varchar(200) COLLATE utf8 NOT NULL,
+  `attribute_label` longtext COLLATE utf8,
+  `attribute_type` varchar(200) COLLATE utf8 NOT NULL,
+  `attribute_orderby` varchar(200) COLLATE utf8 NOT NULL,
   `attribute_public` int(1) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 -- --------------------------------------------------------
 
@@ -12772,17 +12772,17 @@ CREATE TABLE `h2t_woocommerce_attribute_taxonomies` (
 
 CREATE TABLE `h2t_woocommerce_downloadable_product_permissions` (
   `permission_id` bigint(20) NOT NULL,
-  `download_id` varchar(32) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `download_id` varchar(32) COLLATE utf8 NOT NULL,
   `product_id` bigint(20) NOT NULL,
   `order_id` bigint(20) NOT NULL DEFAULT '0',
-  `order_key` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `user_email` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `order_key` varchar(200) COLLATE utf8 NOT NULL,
+  `user_email` varchar(200) COLLATE utf8 NOT NULL,
   `user_id` bigint(20) DEFAULT NULL,
-  `downloads_remaining` varchar(9) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `downloads_remaining` varchar(9) COLLATE utf8 DEFAULT NULL,
   `access_granted` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `access_expires` datetime DEFAULT NULL,
   `download_count` bigint(20) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 -- --------------------------------------------------------
 
@@ -12793,9 +12793,9 @@ CREATE TABLE `h2t_woocommerce_downloadable_product_permissions` (
 CREATE TABLE `h2t_woocommerce_order_itemmeta` (
   `meta_id` bigint(20) NOT NULL,
   `order_item_id` bigint(20) NOT NULL,
-  `meta_key` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_520_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `meta_key` varchar(255) COLLATE utf8 DEFAULT NULL,
+  `meta_value` longtext COLLATE utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 -- --------------------------------------------------------
 
@@ -12805,10 +12805,10 @@ CREATE TABLE `h2t_woocommerce_order_itemmeta` (
 
 CREATE TABLE `h2t_woocommerce_order_items` (
   `order_item_id` bigint(20) NOT NULL,
-  `order_item_name` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `order_item_type` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `order_item_name` longtext COLLATE utf8 NOT NULL,
+  `order_item_type` varchar(200) COLLATE utf8 NOT NULL DEFAULT '',
   `order_id` bigint(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 -- --------------------------------------------------------
 
@@ -12819,9 +12819,9 @@ CREATE TABLE `h2t_woocommerce_order_items` (
 CREATE TABLE `h2t_woocommerce_payment_tokenmeta` (
   `meta_id` bigint(20) NOT NULL,
   `payment_token_id` bigint(20) NOT NULL,
-  `meta_key` varchar(255) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
-  `meta_value` longtext COLLATE utf8mb4_unicode_520_ci
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `meta_key` varchar(255) COLLATE utf8 DEFAULT NULL,
+  `meta_value` longtext COLLATE utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 -- --------------------------------------------------------
 
@@ -12831,12 +12831,12 @@ CREATE TABLE `h2t_woocommerce_payment_tokenmeta` (
 
 CREATE TABLE `h2t_woocommerce_payment_tokens` (
   `token_id` bigint(20) NOT NULL,
-  `gateway_id` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `token` text COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `gateway_id` varchar(255) COLLATE utf8 NOT NULL,
+  `token` text COLLATE utf8 NOT NULL,
   `user_id` bigint(20) NOT NULL DEFAULT '0',
-  `type` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `type` varchar(255) COLLATE utf8 NOT NULL,
   `is_default` tinyint(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 -- --------------------------------------------------------
 
@@ -12846,10 +12846,10 @@ CREATE TABLE `h2t_woocommerce_payment_tokens` (
 
 CREATE TABLE `h2t_woocommerce_sessions` (
   `session_id` bigint(20) NOT NULL,
-  `session_key` char(32) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `session_value` longtext COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `session_key` char(32) COLLATE utf8 NOT NULL,
+  `session_value` longtext COLLATE utf8 NOT NULL,
   `session_expiry` bigint(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 --
 -- Đang đổ dữ liệu cho bảng `h2t_woocommerce_sessions`
@@ -12866,9 +12866,9 @@ INSERT INTO `h2t_woocommerce_sessions` (`session_id`, `session_key`, `session_va
 
 CREATE TABLE `h2t_woocommerce_shipping_zones` (
   `zone_id` bigint(20) NOT NULL,
-  `zone_name` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `zone_name` varchar(255) COLLATE utf8 NOT NULL,
   `zone_order` bigint(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 -- --------------------------------------------------------
 
@@ -12879,9 +12879,9 @@ CREATE TABLE `h2t_woocommerce_shipping_zones` (
 CREATE TABLE `h2t_woocommerce_shipping_zone_locations` (
   `location_id` bigint(20) NOT NULL,
   `zone_id` bigint(20) NOT NULL,
-  `location_code` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
-  `location_type` varchar(40) COLLATE utf8mb4_unicode_520_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `location_code` varchar(255) COLLATE utf8 NOT NULL,
+  `location_type` varchar(40) COLLATE utf8 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 -- --------------------------------------------------------
 
@@ -12892,10 +12892,10 @@ CREATE TABLE `h2t_woocommerce_shipping_zone_locations` (
 CREATE TABLE `h2t_woocommerce_shipping_zone_methods` (
   `zone_id` bigint(20) NOT NULL,
   `instance_id` bigint(20) NOT NULL,
-  `method_id` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `method_id` varchar(255) COLLATE utf8 NOT NULL,
   `method_order` bigint(20) NOT NULL,
   `is_enabled` tinyint(1) NOT NULL DEFAULT '1'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 -- --------------------------------------------------------
 
@@ -12905,16 +12905,16 @@ CREATE TABLE `h2t_woocommerce_shipping_zone_methods` (
 
 CREATE TABLE `h2t_woocommerce_tax_rates` (
   `tax_rate_id` bigint(20) NOT NULL,
-  `tax_rate_country` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `tax_rate_state` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `tax_rate` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
-  `tax_rate_name` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
+  `tax_rate_country` varchar(200) COLLATE utf8 NOT NULL DEFAULT '',
+  `tax_rate_state` varchar(200) COLLATE utf8 NOT NULL DEFAULT '',
+  `tax_rate` varchar(200) COLLATE utf8 NOT NULL DEFAULT '',
+  `tax_rate_name` varchar(200) COLLATE utf8 NOT NULL DEFAULT '',
   `tax_rate_priority` bigint(20) NOT NULL,
   `tax_rate_compound` int(1) NOT NULL DEFAULT '0',
   `tax_rate_shipping` int(1) NOT NULL DEFAULT '1',
   `tax_rate_order` bigint(20) NOT NULL,
-  `tax_rate_class` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `tax_rate_class` varchar(200) COLLATE utf8 NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 -- --------------------------------------------------------
 
@@ -12924,10 +12924,10 @@ CREATE TABLE `h2t_woocommerce_tax_rates` (
 
 CREATE TABLE `h2t_woocommerce_tax_rate_locations` (
   `location_id` bigint(20) NOT NULL,
-  `location_code` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL,
+  `location_code` varchar(255) COLLATE utf8 NOT NULL,
   `tax_rate_id` bigint(20) NOT NULL,
-  `location_type` varchar(40) COLLATE utf8mb4_unicode_520_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+  `location_type` varchar(40) COLLATE utf8 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8;
 
 --
 -- Chỉ mục cho các bảng đã đổ
