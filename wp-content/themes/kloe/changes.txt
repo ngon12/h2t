@@ -1,0 +1,9 @@
+1.1.1
+- Updated Visual Composer to 4.11.2.1
+- Updated Revolution Slider to 5.2.5
+
+1.1
+- Added  Wordpress 4.5 compatibility
+- Updated Visual Composer to 4.11.1
+- Fixed bug with variable product layout
+- Fixed bug with shop masonry shortcode html structure

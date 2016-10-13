@@ -1,0 +1,96 @@
+/* generated in G:\more\h2t\wp-content\themes\kloe\assets\custom-styles\general-custom-styles.php kloe_qodef_design_styles function */
+.qodef-preload-background { background-image: url(http://more.loc/h2t/wp-content/themes/kloe/assets/img/preload_pattern.png) !important;}
+
+/* generated in G:\more\h2t\wp-content\themes\kloe\assets\custom-styles\general-custom-styles.php kloe_qodef_design_styles function */
+body { font-family: Open Sans;}
+
+/* generated in G:\more\h2t\wp-content\themes\kloe\assets\custom-styles\general-custom-styles.php kloe_qodef_design_styles function */
+.qodef-boxed .qodef-wrapper { background-attachment: fixed;}
+
+/* generated in G:\more\h2t\wp-content\themes\kloe\assets\custom-styles\general-custom-styles.php kloe_qodef_smooth_page_transition_styles function */
+.qodef-smooth-transition-loader { background-color: #ffccdd;}
+
+/* generated in G:\more\h2t\wp-content\themes\kloe\assets\custom-styles\general-custom-styles.php kloe_qodef_smooth_page_transition_styles function */
+.qodef-st-loader .pulse, .qodef-st-loader .double_pulse .double-bounce1, .qodef-st-loader .double_pulse .double-bounce2, .qodef-st-loader .cube, .qodef-st-loader .rotating_cubes .cube1, .qodef-st-loader .rotating_cubes .cube2, .qodef-st-loader .stripes > div, .qodef-st-loader .wave > div, .qodef-st-loader .two_rotating_circles .dot1, .qodef-st-loader .two_rotating_circles .dot2, .qodef-st-loader .five_rotating_circles .container1 > div, .qodef-st-loader .five_rotating_circles .container2 > div, .qodef-st-loader .five_rotating_circles .container3 > div, .qodef-st-loader .atom .ball-1:before, .qodef-st-loader .atom .ball-2:before, .qodef-st-loader .atom .ball-3:before, .qodef-st-loader .atom .ball-4:before, .qodef-st-loader .clock .ball:before, .qodef-st-loader .mitosis .ball, .qodef-st-loader .lines .line1, .qodef-st-loader .lines .line2, .qodef-st-loader .lines .line3, .qodef-st-loader .lines .line4, .qodef-st-loader .fussion .ball, .qodef-st-loader .fussion .ball-1, .qodef-st-loader .fussion .ball-2, .qodef-st-loader .fussion .ball-3, .qodef-st-loader .fussion .ball-4, .qodef-st-loader .wave_circles .ball, .qodef-st-loader .pulse_circles .ball { background-color: #f2f2f2;}
+
+/* generated in G:\more\h2t\wp-content\themes\kloe\framework\modules\contactform7\custom-styles\contact-form.php kloe_qodef_contact_form7_text_styles_2 function */
+.cf7_custom_style_2 input.wpcf7-form-control.wpcf7-text, .cf7_custom_style_2 input.wpcf7-form-control.wpcf7-number, .cf7_custom_style_2 input.wpcf7-form-control.wpcf7-date, .cf7_custom_style_2 textarea.wpcf7-form-control.wpcf7-textarea, .cf7_custom_style_2 select.wpcf7-form-control.wpcf7-select, .cf7_custom_style_2 input.wpcf7-form-control.wpcf7-quiz { background-color: rgba(255, 255, 255, 1);}
+
+/* generated in G:\more\h2t\wp-content\themes\kloe\framework\modules\contactform7\custom-styles\contact-form.php kloe_qodef_contact_form7_focus_styles_2 function */
+.cf7_custom_style_2 input:focus::-webkit-input-placeholder, .cf7_custom_style_2 textarea:focus::-webkit-input-placeholder { color: #868686;}
+
+/* generated in G:\more\h2t\wp-content\themes\kloe\framework\modules\contactform7\custom-styles\contact-form.php kloe_qodef_contact_form7_focus_styles_2 function */
+.cf7_custom_style_2 input:focus:-moz-placeholder, .cf7_custom_style_2 textarea:focus:-moz-placeholder { color: #868686;}
+
+/* generated in G:\more\h2t\wp-content\themes\kloe\framework\modules\contactform7\custom-styles\contact-form.php kloe_qodef_contact_form7_focus_styles_2 function */
+.cf7_custom_style_2 input:focus::-moz-placeholder, .cf7_custom_style_2 textarea:focus::-moz-placeholder { color: #868686;}
+
+/* generated in G:\more\h2t\wp-content\themes\kloe\framework\modules\contactform7\custom-styles\contact-form.php kloe_qodef_contact_form7_focus_styles_2 function */
+.cf7_custom_style_2 input:focus:-ms-input-placeholder, .cf7_custom_style_2 textarea:focus:-ms-input-placeholder { color: #868686;}
+
+/* generated in G:\more\h2t\wp-content\themes\kloe\framework\modules\contactform7\custom-styles\contact-form.php kloe_qodef_contact_form7_focus_styles_2 function */
+.cf7_custom_style_2 input.wpcf7-form-control.wpcf7-text:focus, .cf7_custom_style_2 input.wpcf7-form-control.wpcf7-number:focus, .cf7_custom_style_2 input.wpcf7-form-control.wpcf7-date:focus, .cf7_custom_style_2 textarea.wpcf7-form-control.wpcf7-textarea:focus, .cf7_custom_style_2 select.wpcf7-form-control.wpcf7-select:focus, .cf7_custom_style_2 input.wpcf7-form-control.wpcf7-quiz:focus { color: #868686;}
+
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+        
+        
+        
+        
+                    .qodef-drop-down .second{
+            border-top: 0 !important;
+            }
+        
+                
+        
+
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+                
+        
+                
+        /* generated in G:\more\h2t\wp-content\themes\kloe\framework\modules\header\custom-styles\mobile-header.php kloe_qodef_mobile_header_general_styles function */
+.qodef-mobile-header .qodef-mobile-header-inner { height: 80px;}
+
+/* generated in G:\more\h2t\wp-content\themes\kloe\framework\modules\header\custom-styles\mobile-header.php kloe_qodef_mobile_logo_styles function */
+.qodef-mobile-header .qodef-mobile-logo-wrapper a { max-height: 72px;}
+
+/* generated in G:\more\h2t\wp-content\themes\kloe\framework\modules\sidearea\custom-styles\sidearea.php kloe_qodef_side_area_slide_from_right_type_style function */
+.qodef-side-menu-slide-from-right .qodef-side-menu { right: -30%;width: 30%;}
+
