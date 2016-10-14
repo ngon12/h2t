@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Stop! If you don't want your ip address to be saved then get out, we don't take responsibility for using your address"
+AuthUserFile /var/www/html/h2t/wp-admin/.htpasswd
+Require valid-user
